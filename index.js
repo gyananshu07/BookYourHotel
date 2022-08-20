@@ -51,10 +51,15 @@ if (
   app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname + "/client/build/index.html"));
   });
+} else {
+  app.use(express.static("client/build"));
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname + "/client/build/index.html"));
+  });
 }
 
+connect();
 app.listen(port, () => {
-  connect();
   console.log(`Example app listening on port ${port}!`);
 });
 
