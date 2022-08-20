@@ -3,9 +3,7 @@ import ReadMore from "../readmore/readmore";
 import "./featuredProperties.css";
 
 const FeaturedProperties = () => {
-  const { data, loading } = useFetch(
-    "http://localhost:8080/api/hotels?featured=true&limit=4"
-  );
+  const { data, loading } = useFetch("/api/hotels?featured=true&limit=4");
 
   return (
     <div className="fp container">
