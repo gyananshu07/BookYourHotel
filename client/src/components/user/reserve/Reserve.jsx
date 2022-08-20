@@ -10,7 +10,7 @@ import "./reserve.css";
 
 const Reserve = ({ setOpenModal, hotelId }) => {
   const [selectedRooms, setSelectedRooms] = useState([]);
-  const { data, loading, error } = useFetch(`/hotels/rooms/${hotelId}`);
+  const { data } = useFetch(`/api/hotels/rooms/${hotelId}`);
 
   const { dates } = useContext(SearchContext);
 

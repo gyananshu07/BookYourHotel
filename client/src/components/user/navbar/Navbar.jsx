@@ -11,7 +11,7 @@ const Navbar = () => {
   const handleLogout = async (e) => {
     e.preventDefault();
     try {
-      await axios.get("/auth/logout");
+      await axios.get("/api/auth/logout");
       dispatch({ type: "LOGOUT" });
       navigate("/");
     } catch (err) {

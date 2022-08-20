@@ -16,7 +16,7 @@ const EditUserAdmin = ({ inputs, title }) => {
   const path = location.pathname.split("/")[2];
   const id = location.pathname.split("/")[4];
 
-  const { data } = useFetch(`/${path}/${id}`);
+  const { data } = useFetch(`/api/${path}/${id}`);
 
   console.log(path, id);
 
@@ -39,7 +39,7 @@ const EditUserAdmin = ({ inputs, title }) => {
 
       const newUser = { ...info, profileImage: url };
 
-      const val = await axios.put(`/${path}/${id}`, newUser);
+      const val = await axios.put(`/api/${path}/${id}`, newUser);
       setSuccess(val);
     } catch (error) {}
   };

@@ -27,7 +27,7 @@ const Hotel = () => {
   const [open, setOpen] = useState(false);
   const [openModal, setOpenModal] = useState(false);
 
-  const { data, loading } = useFetch(`/hotels/${id}`);
+  const { data, loading } = useFetch(`/api/hotels/${id}`);
 
   const navigate = useNavigate();
   const { user } = useContext(AuthContext);

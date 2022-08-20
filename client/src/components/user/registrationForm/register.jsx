@@ -81,10 +81,7 @@ const Register = () => {
 
         const newUser = { ...info, profileImage: url };
 
-        const success = await axios.post(
-          "http://localhost:3000/api/auth/register",
-          newUser
-        );
+        const success = await axios.post("/api/auth/register", newUser);
 
         success ? navigate("/login") : console.log(success);
       } catch (ex) {

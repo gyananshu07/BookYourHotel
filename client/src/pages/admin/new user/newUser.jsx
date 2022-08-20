@@ -24,13 +24,11 @@ const NewUserAdmin = ({ inputs, title }) => {
         "https://api.cloudinary.com/v1_1/daxilgrvn/image/upload",
         data
       );
-
-      console.log("uploadResponse", uploadResponse);
       const { url } = uploadResponse.data;
 
       const newUser = { ...info, profileImage: url };
 
-      await axios.post("/auth/register", newUser);
+      await axios.post("/api/auth/register", newUser);
     } catch (error) {}
   };
   return (

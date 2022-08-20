@@ -10,7 +10,7 @@ const SingleRoomAdmin = () => {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
   const id = location.pathname.split("/")[3];
-  const { data } = useFetch(`/${path}/${id}`);
+  const { data } = useFetch(`/api/${path}/${id}`);
 
   return (
     <div className="singleAdmin">

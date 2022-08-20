@@ -10,7 +10,7 @@ const Datatable = ({ columns }) => {
   const location = useLocation();
   const path = location.pathname.split("/")[2];
   const [list, setList] = useState([]);
-  const { data } = useFetch(`/${path}`);
+  const { data } = useFetch(`/api/${path}`);
 
   useEffect(() => {
     setList(data);

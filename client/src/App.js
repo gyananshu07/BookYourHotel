@@ -1,7 +1,6 @@
 import "./App.css";
 
 import { useContext } from "react";
-import { DarkModeContext } from "./context/context";
 import { AuthContext } from "./context/AuthContext";
 
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
@@ -26,8 +25,6 @@ import SingleRoomAdmin from "./pages/admin/singleRoom/singleRoom";
 import EditUserAdmin from "./pages/admin/editUser/editUser";
 
 function App() {
-  const { darkMode } = useContext(DarkModeContext);
-
   const ProtectedRoute = ({ children }) => {
     const { user } = useContext(AuthContext);
 

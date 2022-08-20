@@ -14,7 +14,7 @@ const NewRoomAdmin = ({ title }) => {
   const [hotelID, setHotelID] = useState(undefined);
   const [rooms, setRooms] = useState([]);
 
-  const { data, loading } = useFetch("/hotels");
+  const { data, loading } = useFetch("/api/hotels");
 
   const handleChange = (e) => {
     setInfo((prev) => ({ ...prev, [e.target.id]: e.target.value }));
