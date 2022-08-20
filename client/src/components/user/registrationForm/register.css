@@ -1,0 +1,163 @@
+.newRegister {
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(71, 0, 133, 0.559),
+      rgba(89, 3, 219, 0.547)
+    ),
+    url("https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  max-width: 100%;
+  /* max-height: 100vh; */
+  margin: auto;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center !important;
+  justify-content: center;
+}
+
+.newRegister .loginBtn {
+  width: 150px;
+  height: max-content;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fdc500 !important;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  font-family: "Exo", sans-serif !important;
+}
+
+.newRegisterContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: max-content;
+  background-color: #240046;
+  border-radius: 10px;
+}
+
+.top,
+.bottom {
+  padding: 10px;
+  /* margin: 10px; */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+h1 {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  text-align: center;
+}
+
+.left > img {
+  width: 150px !important;
+  height: 150px !important ;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fdc500;
+}
+
+.right {
+  flex: 4;
+  padding: 20px;
+}
+
+.right > form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between !important;
+}
+
+.right > form .formInput {
+  width: 40%;
+}
+
+.right > form .formInput > label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+.right > form .formInput > span {
+  color: #fdc500;
+  font-weight: 300;
+}
+
+.right > form .formInput > label > .icon {
+  cursor: pointer;
+}
+
+.right > form .formInput > input {
+  font-family: "Exo", sans-serif !important;
+  width: 100%;
+  padding: 5px;
+  outline: none;
+  border-radius: 3px;
+  border: 3px solid #fdc500;
+}
+
+.right > form > button {
+  width: 150px;
+  height: max-content;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fdc500 !important;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  font-family: "Exo", sans-serif !important;
+}
+
+@media (max-width: 768px) {
+  .newRegister {
+    height: max-content;
+    padding: 20px 0 20px 0;
+  }
+  .right > form .formInput {
+    width: 100% !important;
+  }
+  .right > form > button {
+    margin: auto;
+    text-align: center;
+  }
+}
+@media (max-width: 582px) {
+  .newRegister {
+    height: max-content;
+  }
+
+  .newRegisterContainer {
+    width: 90% !important;
+    margin: 20px !important;
+    margin-top: 20px;
+  }
+  .bottom {
+    flex-direction: column;
+    height: max-content;
+  }
+
+  .left > img {
+    width: 100px !important;
+    height: 100px !important ;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}

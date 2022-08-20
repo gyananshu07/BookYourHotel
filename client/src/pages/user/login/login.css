@@ -1,0 +1,123 @@
+.login {
+  height: 100vh;
+  background-image: linear-gradient(
+      rgba(71, 0, 133, 0.559),
+      rgba(89, 3, 219, 0.547)
+    ),
+    url("https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+  width: 100% !important;
+  max-width: 100%;
+  max-height: 100vh;
+  margin: auto;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center !important;
+  justify-content: center;
+}
+
+.login .registerBtn {
+  width: 150px;
+  height: max-content;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fdc500 !important;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  font-family: "Exo", sans-serif !important;
+}
+
+.lContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 350px;
+  background-color: #240046;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.lContainer > span {
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.lContainer .span-title {
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.lContainer .span-error {
+  color: white;
+  font-weight: 400;
+}
+
+.uContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+}
+
+.pContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: start;
+}
+
+.lContainer .uContainer > span {
+  color: white;
+  text-align: left;
+  font-size: 16px;
+}
+
+.lContainer .pContainer > span {
+  color: white;
+  text-align: left;
+  font-size: 16px;
+}
+
+.lContainer .uContainer > input {
+  border: 3px solid #fdc500;
+  outline: none;
+  height: 40px;
+  width: 100%;
+  border-radius: 2px;
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+.lContainer .pContainer > input {
+  border: 3px solid #fdc500;
+  outline: none;
+  height: 40px;
+  width: 100%;
+  border-radius: 2px;
+  margin-top: 2px;
+  margin-bottom: 10px;
+}
+
+.lContainer > button {
+  width: 150px;
+  height: max-content;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fdc500 !important;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  font-family: "Exo", sans-serif !important;
+}

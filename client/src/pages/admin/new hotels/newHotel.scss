@@ -1,0 +1,102 @@
+.newAdmin {
+  width: 100%;
+  display: flex;
+
+  .newAdminContainer {
+    flex: 6;
+
+    .topAdmin,
+    .bottomAdmin {
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      padding: 10px;
+      margin: 20px;
+      display: flex;
+
+      h1 {
+        color: blueviolet;
+        font-size: 20px;
+      }
+
+      .left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        text-align: center;
+
+        img {
+          width: 150px !important;
+          height: 150px !important ;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+
+      .right {
+        flex: 2;
+
+        form {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 30px;
+          justify-content: space-around;
+
+          .selectRooms {
+            width: 100%;
+
+            select {
+              border: 2px solid blueviolet;
+              width: 100%;
+              padding: 5px;
+              font-family: "Exo", sans-serif !important;
+            }
+          }
+          .formInput {
+            width: 40%;
+            font-family: "Exo", sans-serif !important;
+
+            label {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              color: black;
+
+              .icon {
+                cursor: pointer;
+              }
+            }
+
+            select {
+              font-family: "Exo", sans-serif !important;
+              border: 2px solid blueviolet;
+              width: 100%;
+              padding: 5px;
+            }
+
+            input {
+              font-family: "Exo", sans-serif !important;
+              width: 100%;
+              padding: 5px;
+              border: none;
+              border-bottom: 1px solid blueviolet;
+            }
+          }
+
+          button {
+            width: 150px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: blueviolet;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            font-family: "Exo", sans-serif !important;
+          }
+        }
+      }
+    }
+  }
+}

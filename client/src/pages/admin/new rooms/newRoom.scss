@@ -1,0 +1,97 @@
+.new {
+  width: 100%;
+  display: flex;
+
+  .newContainer {
+    flex: 6;
+
+    .top,
+    .bottom {
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      padding: 10px;
+      margin: 20px;
+      display: flex;
+
+      h1 {
+        color: blueviolet;
+        font-size: 20px;
+      }
+
+      .left {
+        flex: 1;
+        text-align: center;
+
+        img {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+
+      .right {
+        flex: 2;
+
+        form {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 30px;
+          justify-content: space-between;
+          padding: 0 20px;
+
+          .formInput {
+            width: 40% !important;
+            font-family: "Exo", sans-serif !important;
+
+            label {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              color: black;
+
+              .icon {
+                cursor: pointer;
+              }
+            }
+
+            select {
+              font-family: "Exo", sans-serif !important;
+              border: 2px solid blueviolet;
+              width: 100%;
+              padding: 5px;
+            }
+
+            textarea {
+              font-family: "Exo", sans-serif !important;
+              padding: 5px;
+              border: none;
+              border: 2px solid blueviolet;
+            }
+
+            input {
+              font-family: "Exo", sans-serif !important;
+              width: 100%;
+              padding: 5px;
+              border: none;
+              border-bottom: 1px solid blueviolet;
+            }
+          }
+
+          button {
+            width: 150px;
+            padding: 10px !important;
+            border: none;
+            border-radius: 5px;
+            background-color: blueviolet;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            font-family: "Exo", sans-serif !important;
+          }
+        }
+      }
+    }
+  }
+}
