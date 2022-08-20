@@ -120,11 +120,11 @@ const Register = () => {
   return (
     <div className="newRegister">
       <div className="newRegisterContainer container-sm mx-auto">
-        <div className="top">
+        <div className="topRegister">
           <h1>Register Yourself</h1>
         </div>
-        <div className="bottom">
-          <div className="left">
+        <div className="bottomRegister">
+          <div className="leftRegister">
             <img
               src={
                 file
@@ -134,9 +134,9 @@ const Register = () => {
               alt=""
             />
           </div>
-          <div className="right">
+          <div className="rightRegister">
             <form>
-              <div className="formInput">
+              <div className="formInputRegister">
                 <label htmlFor="file">
                   Image: <DriveFolderUploadOutlinedIcon className="icon" />
                 </label>

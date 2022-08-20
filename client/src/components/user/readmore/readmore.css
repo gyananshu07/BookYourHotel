@@ -1,0 +1,10 @@
+.text {
+  display: inline;
+  width: 100%;
+}
+
+.read-or-hide {
+  font-weight: 600;
+  color: #510087;
+  cursor: pointer;
+}

@@ -1,4 +1,4 @@
-import "./hotel.css";
+import "./hotelUser.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -27,7 +27,7 @@ const Hotel = () => {
   const [open, setOpen] = useState(false);
   const [openModal, setOpenModal] = useState(false);
 
-  const { data, loading } = useFetch(`/api/hotels/${id}`);
+  const { data, loading } = useFetch(`http://localhost:8080/api/hotels/${id}`);
 
   const navigate = useNavigate();
   const { user } = useContext(AuthContext);
@@ -41,7 +41,7 @@ const Hotel = () => {
     return diffDays;
   }
 
-  const days = dayDifference(dates[0].endDate, dates[0].startDate);
+  const days = dayDifference(dates[0]?.endDate, dates[0]?.startDate);
 
   const handleOpen = (i) => {
     setSlideNumber(i);
@@ -91,7 +91,7 @@ const Hotel = () => {
                 />
                 <div className="sliderWrapper">
                   <img
-                    src={data.photos[slideNumber]}
+                    src={data?.photos[slideNumber]}
                     alt=""
                     className="sliderImg"
                   />
@@ -108,24 +108,25 @@ const Hotel = () => {
                 <button className="bookNow" onClick={handleBook}>
                   Reserve or Book Now!
                 </button>
-                <h1 className="hotelTitle">{data.name}</h1>
+                <h1 className="hotelTitle">{data?.name}</h1>
               </div>
               <div className="hotelAddress">
                 <FontAwesomeIcon
                   icon={faLocationDot}
                   style={{ color: "red" }}
                 />
-                <span>{data.address}</span>
+                <span>{data?.address}</span>
               </div>
               <span className="hotelDistance">
-                {data.distance} m from Center
+                {data?.distance} from Airport
               </span>
               <span className="hotelPriceHighlight">
-                Book a stay over <b>Rs. {data.cheapestPrice} </b>at this
+                Book a stay over{" "}
+                <b>Rs. {days * data?.cheapestPrice * options?.room} </b>at this
                 property and get a free airport taxi!
               </span>
               <div className="hotelImages">
-                {data.photos?.map((photo, i) => (
+                {data?.photos?.map((photo, i) => (
                   <div className="hotelImgWrapper" key={i}>
                     <img
                       onClick={() => handleOpen(i)}
@@ -138,17 +139,18 @@ const Hotel = () => {
               </div>
               <div className="hotelDetails">
                 <div className="hotelDetailsTexts">
-                  <h1 className="hotelTitle">{data.title}</h1>
-                  <p className="hotelDesc">{data.description}</p>
+                  <h1 className="hotelTitle">{data?.title}</h1>
+                  <p className="hotelDesc">{data?.description}</p>
                 </div>
-                <div className="hotelDetailsPrice mx-auto">
+                <div className="hotelDetailsPrice mx-auto text-justify">
                   <h1>Perfect for {days}-night stay!</h1>
                   <span>
-                    Located in the real heart of Krakow, this property has an
-                    excellent location score of 9.8!
+                    Located in the real heart of {data?.city}, this property has
+                    an excellent location score of{" "}
+                    {data?.rating ? data?.rating : 9.8}!
                   </span>
                   <h2>
-                    <b>Rs. {days * data.cheapestPrice * options.room}</b> (
+                    <b>Rs. {days * data?.cheapestPrice * options?.room}</b> (
                     {days} nights)
                   </h2>
                   <button onClick={handleBook}>Reserve or Book Now!</button>

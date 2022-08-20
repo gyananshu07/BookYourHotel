@@ -21,18 +21,22 @@ const List = () => {
   const [max, setMax] = useState(undefined);
 
   const { data, loading, reFetchData } = useFetch(
-    `/api/hotels?city=${destination}&min=${min || 0}&max=${max || 99999}`
+    `http://localhost:8080/api/hotels?city=${destination}&min=${min || 0}&max=${
+      max || 99999
+    }`
   );
 
   const handleClick = () => {
-    reFetchData(`/api/hotels?city=${destination}&min=${min}&max=${max}`);
+    reFetchData(
+      `http://localhost:8080/api/hotels?city=${destination}&min=${min}&max=${max}`
+    );
   };
 
   return (
     <div>
       <Navbar />
       <Header type="list" />
-      <div className="listContainer container">
+      <div className="listContainer container mb-2">
         <div className="listWrapper mx-auto">
           <div className="listSearch mx-auto mb-3">
             <h1 className="lsTitle">Search</h1>
@@ -122,7 +126,6 @@ const List = () => {
             )}
           </div>
         </div>
-        z
       </div>
     </div>
   );

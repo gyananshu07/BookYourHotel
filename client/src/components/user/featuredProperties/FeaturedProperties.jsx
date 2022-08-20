@@ -1,12 +1,12 @@
 import useFetch from "../../../hooks/useFetch";
+import ReadMore from "../readmore/readmore";
 import "./featuredProperties.css";
 
 const FeaturedProperties = () => {
-  const { data, loading, error } = useFetch(
-    "/api/hotels?featured=true&limit=4"
+  const { data, loading } = useFetch(
+    "http://localhost:8080/api/hotels?featured=true&limit=4"
   );
 
-  console.log(data);
   return (
     <div className="fp container">
       {loading ? (
@@ -19,10 +19,12 @@ const FeaturedProperties = () => {
                 <img src={item.photos[0]} alt="" className="fpImg" />
                 <span className="fpName">{data[i]?.name}</span>
                 <span className="fpCity">{data[i]?.city}</span>
-                <span className="fpPrice">{data[i]?.cheapestPrice}</span>
+                <span className="fpPrice">₹ {data[i]?.cheapestPrice}</span>
                 <div className="fpRating">
-                  <button>8.9</button>
-                  <span>{data[i]?.description}</span>
+                  <button>{data[i]?.rating ? data[i].rating : 9.5}</button>
+                  <span>
+                    <ReadMore>{data[i]?.description}</ReadMore>
+                  </span>
                 </div>
               </div>
             );
