@@ -8,20 +8,23 @@ dotenv.config();
 
 const port = process.env.PORT || 8080;
 
-const authRoute = require("./routes/auth");
-const userRoute = require("./routes/users");
-const hotelRoute = require("./routes/hotels");
-const roomRoute = require("./routes/rooms");
-const bookingRouter = require("./routes/booking");
-
 const connect = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URI);
+    await mongoose.connect(process.env.MONGO_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
     console.log("Connected to MongoDB");
   } catch (error) {
     console.log(error);
   }
 };
+
+const authRoute = require("./routes/auth");
+const userRoute = require("./routes/users");
+const hotelRoute = require("./routes/hotels");
+const roomRoute = require("./routes/rooms");
+const bookingRouter = require("./routes/booking");
 
 // middleware
 app.use(cors());
